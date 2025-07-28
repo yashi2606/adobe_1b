@@ -28,3 +28,23 @@ This solution analyzes multiple PDF documents to extract and prioritize relevant
 ### Build the Docker Image
 ```bash
 docker build --platform linux/amd64 -t persona-analyzer:latest .
+
+## Key Features
+
+1. **Persona-Specific Analysis**: Custom weighting system based on the persona's role and task
+2. **Context-Aware Processing**: Understands the job-to-be-done and prioritizes accordingly
+3. **Efficient Processing**: Optimized for quick analysis of multiple documents
+4. **Structured Output**: Generates output in the exact required JSON format
+5. **Constraint Compliance**: Meets all size, runtime, and offline requirements
+
+## Testing the Solution
+
+To test with the provided example:
+
+1. Create an `input` directory with:
+   - `challenge1b_input.json`
+   - All the referenced PDF files
+2. Run the Docker container as shown above
+3. Check the `output` directory for `output.json` which should match the expected format
+
+The solution is designed to handle various personas and document types, making it flexible for different test cases while maintaining high relevance in its output.
